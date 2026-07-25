@@ -400,7 +400,7 @@ function closeModal(){
   document.getElementById('form-view').style.display = '';
   document.getElementById('success-view').style.display = 'none';
   const btn = document.getElementById('modal-submit');
-  btn.disabled = false; btn.textContent = 'تأكيد الطلب';
+  btn.disabled = false; btn.textContent = 'Confirmer la commande';
   const notice = document.getElementById('nutsa-submit-notice');
   if (notice) notice.remove();
 }
@@ -445,7 +445,7 @@ document.getElementById('order-form').addEventListener('submit', async function(
 
   if(!CONFIG.appsScriptUrl || !CONFIG.intakeToken){
     clearInterval(progressTimer);
-    submitBtn.disabled = false; submitBtn.textContent = 'تأكيد الطلب';
+    submitBtn.disabled = false; submitBtn.textContent = 'Confirmer la commande';
     showError("Configuration manquante 🙏 Contacte-nous directement.");
     return;
   }
@@ -453,7 +453,7 @@ document.getElementById('order-form').addEventListener('submit', async function(
   const c = recomputeCart();
   if(c.count === 0){
     clearInterval(progressTimer);
-    submitBtn.disabled = false; submitBtn.textContent = 'تأكيد الطلب';
+    submitBtn.disabled = false; submitBtn.textContent = 'Confirmer la commande';
     showError("Ton panier est vide.");
     return;
   }
